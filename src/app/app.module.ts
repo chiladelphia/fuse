@@ -17,6 +17,10 @@ import { fuseConfig } from 'app/fuse-config';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
+import { PrimaryComponent } from './primary/primary.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 const appRoutes: Routes = [
     {
@@ -27,7 +31,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        PrimaryComponent
     ],
     imports     : [
         BrowserModule,
@@ -53,7 +58,10 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        SampleModule
+        SampleModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule
     ],
     bootstrap   : [
         AppComponent
